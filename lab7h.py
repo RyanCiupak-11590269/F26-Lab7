@@ -6,11 +6,26 @@
 # Purpose: Create Histograms.
 # Usage: ./lab7h.py
 
-# TO DO 1: Import pandas and matplotlib modules.
+import matplotlib.pyplot as plt
+import pandas as pd
 
-# TO DO 2: Draw histogram of the data from movies database.
+# TODO 1: Create a new data frame from the link of csv file provided in README.md file.
 
-# TO DO 3: Perform the operations provided in readme.md file on this data.
 
-# TO DO 4: Run the script.
+# TODO 2: Perform the operations provided in readme.md file on this data.
+# - Copy year column in a new series
+
+
+# - Sort years data in ascending order
+
+
+# - Process this sorted years data to find unique year and number of times a year occurs
+
+
+# - Draw a histogram with X-axis as the years and bar height equal to corresponding count.  
+    # - If number of unique years is very large, only display histogram for first 10 years
+
+
+
+# TODO 3: Run the script and take a screenshot of the result.
 

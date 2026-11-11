@@ -6,9 +6,19 @@
 # Purpose: Slice NumPy Arrays.
 # Usage: ./lab7c.py
 
-# TO DO 1: Create numArray according to instructions given in readme.md file.
+import numpy as np  # Step 1: Import NumPy
 
-# TO DO 2: Perform the operations on numArray given in readme.md file.
+# TODO 1: Create numArray according to instructions given in README.md file.
+# - Create a 1D array numArray and initialize it with 100 random numbers
 
-# TO DO 3: Run the script.
+
+# TODO 2: Perform the follow operations on numArray as seen in README.md file.
+# - Slice and print first 10 values
+
+
+# - Slice and print last 10 values
+
+
+# - Slice and print 30 values starting from index 21
+
 

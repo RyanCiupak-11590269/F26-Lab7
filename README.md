@@ -13,9 +13,6 @@ Please note that you must complete the lab during class hours and show your prog
 
 NumPy is a Python library implemented in C language for creating and manipulating data in large arrays at speed. In the slides you saw different ways of creating arrays and initializing them. This lab deals with testing your understanding of those methods discussed in the slides.
 
-### lab7a.py
-#### Creating Arrays 
-
 NumPy, provides an array object similar to a list in Python but with added functionality for numerical operations.
 ```Python
 import numpy as np  # Step 1: Import NumPy
@@ -31,14 +28,15 @@ print("2D Array:\n", arr2)
 arr3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]], [[13, 14, 15], [16, 17, 18]]])
 print("3D Array:\n", arr3d)
 ```
+### lab7a.py
+#### Creating Arrays 
 
-- In your lab10a.py file write code to show two different ways of creating a NumPy array that has integer values from 20 to 49 (including both as well). Save them in two different variables: array1 and array2.
+- In your lab7a.py file write code to show two different ways of creating a NumPy array that has integer values from 20 to 49 (including both as well). Save them in two different variables: array1 and array2.
 - Write code that will create a 3x3 matrix and should have values 1 to 9 arranged in 3 rows and three columns. Save it in variable: array3.
 - Write code to create a 3D matrix of shape 2x3x2 and initialize with month names. Save it in variable: array4.
 - Run your script using the command: python ./lab7a.py.
 - Take screenshot of code and output and add them in a document to be exported as pdf.
 
-### lab7b.py
 #### Changing Dimensions and creating special arrays
 
 The `np.reshape` function allows you to change the shape of an existing array without altering its data.
@@ -94,13 +92,16 @@ random_int_array = np.random.randint(0, 10, (3, 3))  # 3x3 array
 print("\nRandom Integer Array (0 to 10):\n", random_int_array)
 ```
 
-- Copy the code from your lab8a.py file and paste in lab7b.py file.
+### lab7b.py
+
+
+- Copy the code from your lab7a.py file and paste in lab7b.py file.
 - Write code that changes array1 to 5x6 shape (5 rows, 6 columns) and reshapes array2 to a 2x3x5 (a 3D matrix).
 - Create NumPy matrix called array5 that has 5 rows and 5 columns and initialize diagonal values to (45, 7, 61, 8, 9) and rest of the values should be zeros.
 - Create a NumPy 7x7 matrix called array6 and initialize with values sampled from a normal distribution.
 - Run the program using command python ./lab7b.py for both test cases.
 
-### lab7c.py
+
 #### Slicing NumPy Arrays
 
 Slicing in NumPy allows you to access and manipulate subsets of an array's elements. It's similar to slicing lists in Python, but with more functionality due to NumPy's multi-dimensional array capabilities.
@@ -147,6 +148,8 @@ sub_array_3 = arr_2d[-2:, -2:]
 print("\nSliced 2D Array (arr_2d[-2:, -2:]):\n", sub_array_3)
 ```
 
+### lab7c.py
+
 - In your lab7c.py file, create a 1D array numArray and initialize it with 100 random numbers and do following:
   - Slice and print first 10 values.
   - Slice and print last 10 values.
@@ -169,7 +172,6 @@ arr_2d = np.array([[10, 20, 30, 40, 50],[60, 70, 80, 90, 100],[110, 120, 130, 14
 
 ## INVESTIGATION 2: CREATING AND USING SERIES AND DATA FRAMES FROM Pandas
 
-### lab7e.py
 #### Creating Series 
 
 In pandas, a Series is a one-dimensional labeled array capable of holding any data type (integer, string, float, Python objects, etc.). The labels (index) are used to access the data. Series is like a column in a DataFrame or a single dimension of data in an array.
@@ -187,6 +189,8 @@ You can specify a custom index for the Series using:
 pd.Series(data_list, index=['a', 'b', 'c', 'd', 'e'])
 ```
 
+### lab7e.py
+
 - Import pandas module in your lab7e.py file.
 - Create a series with values “<50”, “50-59”, “60-69”, “70-79”, “80-89”, “90-100” and corresponding index names as “F”, “D”, “C”, “B”, “A”, “A+”. Print this series on screen.
 - Write code to print the values of indices “C” and “A+”.
@@ -194,7 +198,7 @@ pd.Series(data_list, index=['a', 'b', 'c', 'd', 'e'])
 - Write code to show the * operation on this list
 - Run your script using the command python ./lab7e.py.
 
-### lab7f.py
+
 #### Creating Data Frames
 
 A DataFrame is a 2-dimensional labeled data structure with columns of potentially different types, similar to a spreadsheet or SQL table.
@@ -215,14 +219,15 @@ df = pd.DataFrame(data)
 print("DataFrame created from dictionary:\n", df)
 ```
 
-- In your lab8f.py file, using pandas create and print a data frame from the following dictionaries.
+### lab7f.py
+- In your lab7f.py file, using pandas create and print a data frame from the following dictionaries.
   - {“Apple”: “Green”, “Carrot”: “Red”, “Radish”: “Purple”}
   - {“Okra”: “Thin”, “Potato”: “blob”, “Radish”: “Round”}
   - {“Apple”: 2.1, “Okra”: 3.5, “Carrot”: 1.3, “Potato”: 2.0, “Radish”: 3.0}
 - Using Pandas create a data frame that looks like in the image dataframe.jpg file.
 - Run your script using the command python ./lab7f.py.
 
-### lab7g.py
+
 #### Data Frames and CSV files
 
 CSV (Comma-Separated Values) files are widely used for storing tabular data. Pandas provides simple functions to read from and write to CSV files.
@@ -312,7 +317,7 @@ print("\nValue Counts for Age:\n", age_counts)
 name_counts = df['Name'].value_counts()
 print("\nValue Counts for Name:\n", name_counts)
 ```
-
+### lab7g.py
 - In your lab7g.py file, create a new data frame from a csv file located in : https://github.com/itiievskyi/IMDB-Top-250/blob/master/imdb_top_250.csv.
 - Using Pandas, perform the following operations: 
   - Print summary of the data contained in data frame
@@ -327,14 +332,11 @@ print("\nValue Counts for Name:\n", name_counts)
           2. Add a decade column to the dataframe.
           3. group by decade to get the mean rating for each decade
           4. Creat a scatterlot using MATPLOT.
-   
-
-
 - Run your script using the command python ./lab7g.py.
 
 ## INVESTIGATION 3: PLOTTING DATA WITH Matplotlib
 
-### lab7h.py
+
 #### Creating Histograms
 
 Histograms are a type of plot used to represent the distribution of numerical data. They are particularly useful for visualizing the frequency of data within different bins or intervals. In Python, histograms can be created using the `matplotlib` library, which provides various functions for plotting and customizing histograms.
@@ -378,6 +380,8 @@ plt.show()
 `density`: If True, the histogram displays the probability density instead of raw counts. This scales the histogram so that the area under the histogram sums to 1.
 `grid`: Adds grid lines to the plot for better readability.
 
+
+### lab7h.py
 - In your lab7h.py file, import pandas and matplotlib modules.
 - Using pandas and matplotlib draw a histogram of the data from movies database file given in activity 6 above.
 - Perform the following operations:

@@ -6,9 +6,11 @@
 # Purpose: Create Data Frames.
 # Usage: ./lab7f.py
 
-# TO DO 1: Create dataframe from provided dictionaries in readme.md file.
+import pandas as pd  
 
-# TO DO 2: create a data frame provided in dataframe.jpg file.
+# TODO 1: Create dataframe from provided dictionaries in readme.md file.
+# - Create a datatable from the three dictionaries provided in the README
 
-# TO DO 3: Run the script.
+
+# TODO 2: Create a data frame provided in dataframe.jpg file.
 
