@@ -1,22 +1,24 @@
 # Add comments before you do anything else.
 
 #!/usr/bin/env python3
-# Author:
-# Date:
+# Author: Ryan Ciupak
+# Date: November 11, 2026
 # Purpose: Create Arrays.
 # Usage: ./lab7a.py
 
 import numpy as np  
 
-# TODO 1: Create array1 and array2 according to instructions given in README.md file.
-# - Show two different ways of creating a NumPy array that has integer values from 20 to 49 (including both as well)
+numbers = (20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49)
 
+array1 = np.array(numbers)
 
-# TODO 2: Create array3 according to instructions given in README.md file.
-# - Write code that will create a 3x3 matrix containing values from 1 to 9 arranged in 3 rows and three columns.
+array2 = np.arange(20,50,1)
 
+array3 = np.array([[1,2,3],[4,5,6],[7,8,9]])
 
-# TODO 3: Create array4 according to instructions given in README.md file.
-# - Write code to create a 3D matrix of shape 2x3x2 and initialize with month names.  
+array4 = np.array(["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]).reshape(2,3,2)
 
-
+print(array1)
+print(array2)
+print(array3)
+print(array4)
