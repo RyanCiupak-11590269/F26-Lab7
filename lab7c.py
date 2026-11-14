@@ -25,3 +25,8 @@ print(numArray[-10 :])
 # - Slice and print 30 values starting from index 21
 
 print(numArray[20 : 50])
+
+# - With one statement, change all values to 101 from index 50 to 65.
+
+numArray[50 : 65] = 101
+print(numArray[49 : 70])
