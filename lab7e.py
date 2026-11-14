@@ -12,12 +12,17 @@ import pandas as pd
 # - Create a series of values   "<50", "50-59", "60-69", "70-79", "80-89", "90-100"
 # - Corresponding index names as "F",    "D",     "C",     "B",     "A",     "A+"
 
+grades = pd.Series(["<50", "50-59", "60-69", "70-79", "80-89", "90-100"], ["F", "D", "C", "B", "A", "A+"])
 
 # TODO 2: Perform the following operations on this series as seen in the README.md file.
 # - Write code to print out the values of indices C and A+
 
+print(grades.loc[["C", "A+"]])
+
 # - Write code to print value "60-69" without directly printing its index name.
+
+print(grades.iloc[2])
 
 # - Writecode to show the * operation on this list
 
-
+print(grades * 2)
