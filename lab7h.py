@@ -1,31 +1,30 @@
 # Add comments before you do anything else.
 
 #!/usr/bin/env python3
-# Author:
-# Date:
+# Author:Ryan Ciupak
+# Date: Nov 14, 2026
 # Purpose: Create Histograms.
 # Usage: ./lab7h.py
 
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# TODO 1: Create a new data frame from the link of csv file provided in README.md file.
+imdb = pd.read_csv("imdb_top_250.csv")
 
+years = pd.Series(imdb["Year"])
 
-# TODO 2: Perform the operations provided in readme.md file on this data.
-# - Copy year column in a new series
+years = years.sort_values()
 
+unique = years.unique()
+count = years.value_counts()
 
-# - Sort years data in ascending order
+if len(years)>10:
+    years = years.head(10)
 
-
-# - Process this sorted years data to find unique year and number of times a year occurs
-
-
-# - Draw a histogram with X-axis as the years and bar height equal to corresponding count.  
-    # - If number of unique years is very large, only display histogram for first 10 years
-
-
-
-# TODO 3: Run the script and take a screenshot of the result.
+fig, ax = plt.subplots()
+ax.hist(years)
+plt.title("Histogram")
+plt.xlabel("Year")
+plt.ylabel("Number of movies")
+plt.savefig("histogram_1.png")
 
